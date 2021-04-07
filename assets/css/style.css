@@ -1,0 +1,150 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    font-family: "New Tegomin";
+}
+
+:root {
+    --bold: 600;
+    --bolder: 700;
+    --weatherBorderRadius: 8px;
+    --rainfallBlue: #a2c0ec66;
+    --weatherIconMaroon: #a5032780;
+    --contentCardBackground: #c5aa8180;
+    --contentCardHeader: #c08d6380;
+}
+
+body {
+    font-family: "New Tegomin";
+    font-weight: var(--bold);
+}
+
+header {
+    /* padding: 10px 0 0; */
+    background-color: #506a43d9;
+}
+.brand {
+    padding: 10px;
+    letter-spacing: 0.2rem;
+    font-weight: var(--bolder);
+    font-size: 18px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    color: black;
+    letter-spacing: 0.19rem;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.widget-container {
+    margin: 10px 3px 1.5px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.weather-icon {
+    display: block;
+    width: 74px;
+    height: 74px;
+}
+
+.weather-icon-container {
+    padding: 3px;
+    border-radius: var(--weatherBorderRadius);
+    background-color: var(--weatherIconMaroon);
+}
+
+.rainfall-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    margin-left: 3px;
+    background-color: var(--rainfallBlue);
+    border-radius: var(--weatherBorderRadius);
+}
+
+/* main content */
+
+.container {
+    height: 100vh;
+    background-color: beige;
+    padding: 3rem 8%;
+    /* margin: 0 10rem; */
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-card {
+    background-color: var(--contentCardBackground);
+    flex-grow: 1;
+    width: 45%;
+    margin: 10px 10px;
+    border: 1px solid #886b3e65;
+}
+.content-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 25px -8px rgb(73, 67, 61);
+}
+.card-header {
+    background-color: var(--contentCardHeader);
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.your-garden {
+    /* flex-grow: 5; */
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 5px 0 5px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-list {
+        flex-grow: 1;
+        /* width: 70%; */
+    }
+
+    .nav-bar {
+        flex-grow: 1;
+        /* width: 60vw; */
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .widget-container {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+}
